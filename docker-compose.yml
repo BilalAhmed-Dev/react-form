@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  backend:
+    container_name: backend
+    restart: always
+    build: ./formBackEnd/app
+    volumes:
+      - ./formBackEnd/app:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "8080:8080"
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"
+  app:
+    container_name: app-dev
+    image: app-dev
+    build: ./formFrontEnd
+    volumes:
+      - ./formFrontEnd/src:/app/src
+    ports:
+      - 3000:3000
