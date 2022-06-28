@@ -26,3 +26,9 @@ The api will be working and you will no longer see empty collections.
 
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser to see the front-end react app.
+
+
+
+
+
+TODO: mongo-init.js
